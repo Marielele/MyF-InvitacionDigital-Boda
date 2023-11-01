@@ -1,0 +1,83 @@
+@font-face {
+    font-family: September Script;
+    src: url('/styles/SeptemberScript-Regular.ttf');
+}
+
+:root {
+    --dark: #1e1e1f;
+    --light: #f2f4ff;
+    --primary: #e8f0fa;
+    --secundary: #cee0f4;
+    --tertiary: #a7c1e1;
+    --additional: #84a1c4;
+    --aditional-dark: #607b9b;
+
+    --title-font: 'September Script';
+    --second-title: 'Noto Serif', serif;
+    --main-font: 'Rosarivo', cursive; 
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--main-font);
+    text-align: center;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+h1 {
+    font-size: 8rem;
+    font-family: var(--title-font);
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h2, h3, 
+h4, h5 {
+    font-family: var(--second-title);
+}
+
+a {
+    text-decoration: none;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+/* Header */
+
+/* Content */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.big-font {
+    font-size: 2.5rem;
+}
+
+.main-title__names {
+    margin-bottom: 0;
+}
+
+.main-title__names  span{
+    display: block;
+}
