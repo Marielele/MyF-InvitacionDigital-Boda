@@ -1,83 +1,125 @@
 @font-face {
-    font-family: September Script;
-    src: url('/styles/SeptemberScript-Regular.ttf');
+  font-family: September Script;
+  src: url("/styles/SeptemberScript-Regular.ttf");
 }
 
 :root {
-    --dark: #1e1e1f;
-    --light: #f2f4ff;
-    --primary: #e8f0fa;
-    --secundary: #cee0f4;
-    --tertiary: #a7c1e1;
-    --additional: #84a1c4;
-    --aditional-dark: #607b9b;
+  --dark: #1e1e1f;
+  --light: #f2f4ff;
+  --primary: #fafaf7;
+  --secundary: #cee0f4;
+  --tertiary: #a7c1e1;
+  --additional: #84a1c4;
+  --aditional-dark: #607b9b;
+  --gray: #393939;
 
-    --title-font: 'September Script';
-    --second-title: 'Noto Serif', serif;
-    --main-font: 'Rosarivo', cursive; 
+  --title-font: "September Script";
+  --second-title: "Noto Serif", serif;
+  --main-font: "Rosarivo", cursive;
 }
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: var(--main-font);
-    text-align: center;
-    color: var(--dark);
-    background-color: var(--light);
+  font-size: 1.6rem;
+  font-family: var(--main-font);
+  text-align: center;
+  color: var(--dark);
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 h1 {
-    font-size: 8rem;
-    font-family: var(--title-font);
+  font-size: 6rem;
+  font-family: var(--title-font);
+  line-height: 1;
 }
 
 h2 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
-h2, h3, 
-h4, h5 {
-    font-family: var(--second-title);
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--second-title);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .no-margin {
-    margin: 0;
+  margin: 0;
 }
 
 .no-padding {
-    padding: 0;
+  padding: 0;
+}
+
+.all-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-bg {
+  background-color: var(--primary);
+  padding: 1rem 0;
+  border-radius: 50%;
+  box-shadow: 0px 3px 5px 1px var(--gray);
+  -webkit-box-shadow: 0px 3px 5px 1px var(--gray);
+  -moz-box-shadow: 0px 3px 5px 1px var(--gray);
 }
 
 /* Header */
 
 /* Content */
 .container {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.big-font {
-    font-size: 2.5rem;
+.main-title {
+}
+
+.main-title__img {
+  margin: 2rem 0;
+}
+
+.main-title__img--top {
+  margin-top: 0;
+}
+
+.main-title__img--bottom {
+  margin-bottom: 0;
+}
+
+.main-title__img--viera {
+  max-width: 20%;
+}
+
+.main-title__img--caracola {
+  max-width: 40%;
 }
 
 .main-title__names {
-    margin-bottom: 0;
+  color: var(--additional);
 }
 
-.main-title__names  span{
-    display: block;
+.main-title__names span {
+  display: block;
 }
