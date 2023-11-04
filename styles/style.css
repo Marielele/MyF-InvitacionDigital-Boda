@@ -1,0 +1,172 @@
+:root {
+  --light: #f9faff;
+  --dark: #1e1e1f;
+  --gray: #393939;
+  --primary: #cee0f4;
+  --secondary: #a7c1e1;
+  --tertiary: #84a1c4;
+  --additional: #fafaf7;
+  --additional-dark: #607b9b;
+  --golden: #aa9e1b76;
+
+  --names-font: "Cookie", cursive;
+  --titles-font: "Noto Serif", serif;
+  --main-font: "Rosarivo", cursive;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--main-font);
+  color: var(--gray);
+  background-color: var(--light);
+  line-height: 1;
+}
+
+h1 {
+  font-size: 6.5rem;
+  font-family: var(--names-font);
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--titles-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--additional-dark);
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.paragraph {
+  line-height: 1.4;
+}
+
+/* Header */
+
+/* Content */
+h1 span {
+  display: block;
+}
+
+.separator {
+  border: 0;
+  height: 1.5px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    var(--golden),
+    rgba(0, 0, 0, 0)
+  );
+  text-align: center;
+  margin: 4rem;
+}
+
+.separator:after {
+  content: "❁";
+  display: inline-block;
+  position: relative;
+  top: -0.7rem;
+  font-size: 2rem;
+  padding: 0 0.25rem;
+  background: var(--light);
+  color: var(--golden);
+}
+
+main .separator {
+  margin: 4rem 0 3rem 0;
+}
+
+/* Day counter */
+.day-counter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Navegation */
+.nav {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 1.5rem;
+  text-align: center;
+  align-items: center;
+}
+
+.nav a {
+  border-left: 1px var(--gray) dotted;
+}
+
+.nav a:first-of-type {
+  grid-column: 1 / 4;
+  border-bottom: 1px var(--gray) dotted;
+  border-left: 0;
+  padding-bottom: 1rem;
+}
+
+.nav a:nth-of-type(3n-1) {
+  border-left: 0;
+}
+
+/* .nav {
+  text-align: center;
+  font-family: var(--titles-font);
+  margin: 1rem 0;
+}
+
+.nav a {
+  display: block;
+  padding-bottom: 1.5rem;
+}
+
+.nav a:last-of-type {
+  padding-bottom: 0;
+} */
+
+/* Date */
