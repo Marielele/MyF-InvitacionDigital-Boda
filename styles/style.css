@@ -75,6 +75,14 @@ a {
   font-weight: 600;
 }
 
+.color-dark {
+  color: var(--dark);
+}
+
+.big-font {
+  font-size: larger;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -87,8 +95,9 @@ a {
 /* Header */
 
 /* Content */
-h1 span {
+h1 span, p span {
   display: block;
+  color: var(--dark);
 }
 
 .separator {
@@ -170,3 +179,7 @@ main .separator {
 } */
 
 /* Date */
+
+.parents__names {
+  color: var(--additional-dark);
+}
