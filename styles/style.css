@@ -183,3 +183,14 @@ main .separator {
 .parents__names {
   color: var(--additional-dark);
 }
+
+/* Album */
+.album__legend {
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.album__legend span {
+  font-style: normal;
+  font-size: smaller;
+}
