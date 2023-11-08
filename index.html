@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cookie&family=Noto+Serif:wght@300;600&family=Rosarivo:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;600&family=Rosarivo:ital@0;1&family=Rouge+Script&display=swap"
       rel="stylesheet"
     />
     <link rel="preload" href="styles/style.css" as="style" />
@@ -81,35 +81,48 @@
             <p class="no-margin">Ubicación</p>
           </a>
           <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-macro" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#84a1c4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-macro"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#84a1c4"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M6 15a6 6 0 1 0 12 0" />
               <path d="M18 15a6 6 0 0 0 -6 6" />
               <path d="M12 21a6 6 0 0 0 -6 -6" />
               <path d="M12 21v-10" />
-              <path d="M12 11a5 5 0 0 1 -5 -5v-3l3 2l2 -2l2 2l3 -2v3a5 5 0 0 1 -5 5z" />
+              <path
+                d="M12 11a5 5 0 0 1 -5 -5v-3l3 2l2 -2l2 2l3 -2v3a5 5 0 0 1 -5 5z"
+              />
             </svg>
             <p class="no-margin">Galería</p>
           </a>
           <a href="#">
             <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-tie"
-            width="22"
-            height="22"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#84a1c4"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M12 22l4 -4l-2.5 -11l.993 -2.649a1 1 0 0 0 -.936 -1.351h-3.114a1 1 0 0 0 -.936 1.351l.993 2.649l-2.5 11l4 4z"
-            />
-            <path d="M10.5 7h3l5 5.5" />
-          </svg>
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-tie"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#84a1c4"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M12 22l4 -4l-2.5 -11l.993 -2.649a1 1 0 0 0 -.936 -1.351h-3.114a1 1 0 0 0 -.936 1.351l.993 2.649l-2.5 11l4 4z"
+              />
+              <path d="M10.5 7h3l5 5.5" />
+            </svg>
             <p class="no-margin">Dress code</p>
           </a>
           <a href="#">
@@ -236,8 +249,20 @@
     <hr class="separator" />
     <section class="container text-center">
       <h2>Ubicación</h2>
-      <p class="text-center">Ceremonia religiosa:</p>
-      <p class="text-center">Recepción:</p>
+      <p class="text-center">Moon Palace</p>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.262118296417!2d-86.8296429!3d20.982127499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e815a8a5f8c21%3A0x69e50bf9ec9355f7!2sMoon%20Palace%20Nizuc%2C%2077563%20Quintana%20Roo!5e0!3m2!1ses-419!2smx!4v1699421624684!5m2!1ses-419!2smx"
+          width="300"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p>Ceremonia religiosa:</p>
+      <p>Recepción:</p>
     </section>
     <hr class="separator" />
     <div class="container text-center album">
@@ -266,21 +291,243 @@
     </section>
     <hr class="separator" />
     <section class="container text-center">
-      <h2>Confirmación de asistencia</h2>
-    </section>
-    <hr class="separator" />
-    <section class="container text-center">
       <h2>App del Hotel</h2>
       <p class="text-center paragraph">
         Recuerda que tu prescencia es lo más importante para nosotros, asi que
         para que tu estadía sea mas placentera no olvides instalar la app del
         hotel
       </p>
+      <div class="hotel-app">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.palaceresorts.app"
+          class="hotel-app__button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-google-play"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            stroke-width="1"
+            stroke="#84a1c4"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z"
+            />
+            <path d="M15 9l-10.5 11.5" />
+            <path d="M4.5 3.5l10.5 11.5" />
+          </svg>
+          <p class="no-margin">Playstore</p>
+        </a>
+        <a
+          href="https://apps.apple.com/mx/app/palace-resorts/id1411599607"
+          class="hotel-app__button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-appstore"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            stroke-width="1"
+            stroke="#84a1c4"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+            <path d="M8 16l1.106 -1.99m1.4 -2.522l2.494 -4.488" />
+            <path d="M7 14h5m2.9 0h2.1" />
+            <path d="M16 16l-2.51 -4.518m-1.487 -2.677l-1 -1.805" />
+          </svg>
+          <p class="no-margin">Appstore</p>
+        </a>
+      </div>
       <p class="text-center paragraph">
         Ante cualquier duda sobre la reservación no dude en mandarle mensaje a
         nuestra coordinadora de eventos
       </p>
     </section>
-    <footer></footer>
+    <footer class="footer">
+      <nav class="footer__nav text-center">
+        <a href="">Mariana & Fernando</a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-calendar-heart"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#f9faff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M11.5 21h-5.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"
+            />
+            <path d="M16 3v4" />
+            <path d="M8 3v4" />
+            <path d="M4 11h16" />
+            <path
+              d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z"
+            /></svg
+        ></a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-location-heart"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#f9faff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M10.365 14.73l-.365 -.73l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5l-3.024 8.373"
+            />
+            <path
+              d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z"
+            /></svg
+        ></a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-photo-heart"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#f9faff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 8h.01" />
+            <path
+              d="M11.5 21h-5.5a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v5"
+            />
+            <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l1.5 1.5" />
+            <path
+              d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z"
+            /></svg
+        ></a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-tie"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#f9faff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M12 22l4 -4l-2.5 -11l.993 -2.649a1 1 0 0 0 -.936 -1.351h-3.114a1 1 0 0 0 -.936 1.351l.993 2.649l-2.5 11l4 4z"
+            />
+            <path d="M10.5 7h3l5 5.5" /></svg
+        ></a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-clock-hour-7"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#f9faff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+            <path d="M12 12l-2 3" />
+            <path d="M12 7v5" /></svg
+        ></a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-gift"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#f9faff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M12 8l0 13" />
+            <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" />
+            <path
+              d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5"
+            /></svg
+        ></a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-device-mobile-heart"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#f9faff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M11.5 21h-3.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v6"
+            />
+            <path d="M11 4h2" />
+            <path
+              d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z"
+            /></svg
+        ></a>
+      </nav>
+      <div class="github">
+        <a href="https://github.com/Marielele" class="github__link">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-github"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#f9faff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

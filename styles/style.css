@@ -9,7 +9,7 @@
   --additional-dark: #607b9b;
   --golden: #aa9e1b76;
 
-  --names-font: "Cookie", cursive;
+  --names-font: "Rouge Script", cursive;
   --titles-font: "Noto Serif", serif;
   --main-font: "Rosarivo", cursive;
 }
@@ -95,7 +95,8 @@ a {
 /* Header */
 
 /* Content */
-h1 span, p span {
+h1 span,
+p span {
   display: block;
   color: var(--dark);
 }
@@ -193,4 +194,47 @@ main .separator {
 .album__legend span {
   font-style: normal;
   font-size: smaller;
+}
+
+/* Hotel app */
+.hotel-app {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hotel-app__button {
+  padding: 1rem;
+  border: 1px solid var(--tertiary);
+  border-radius: 3px;
+  color: var(--tertiary);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--secondary);
+  padding-top: 1rem;
+}
+
+.footer__nav a {
+  color: var(--light);
+  margin: 0 .8rem;
+}
+
+.footer__nav a:first-of-type {
+  display: block;
+  margin: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px dotted var(--light);
+}
+
+.github {
+  background-color: var(--tertiary);
+  text-align: end;
+  margin-top: .5rem;
+  padding-top: 1rem;
+}
+
+.github__link {
+  display: contents;
 }
