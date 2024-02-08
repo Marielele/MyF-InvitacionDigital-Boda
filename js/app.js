@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+  startApp();
+});
+
 // Variables
 const counter = document.querySelector(".day-counter").children;
 const counterDays = counter[0].firstChild;
@@ -9,7 +13,6 @@ const btnModal = document.querySelectorAll(".btn-wbg");
 const album = document.querySelector(".album__photos--location");
 const galery = document.querySelector(".album__photos--galery");
 const body = document.querySelector("body");
-// let today = new Date(Date.now());
 let weddingDay = new Date("2024-12-14T16:30:00");
 const second = 1000;
 const minute = second * 60;
@@ -17,7 +20,7 @@ const hour = minute * 60;
 const day = hour * 24;
 let timer;
 
-loadEventListeners();
+startApp();
 
 // Functions
 function loadEventListeners() {
@@ -50,6 +53,48 @@ function loadEventListeners() {
       showIMG(imgSelected);
     }
   });
+
+  window.addEventListener("scroll", (e) => {
+    const section = document.querySelector("#first");
+    const footer = document.querySelector("footer");
+    const floatBtn = body.lastElementChild.classList.contains("floating-btn");
+    if (
+      section.getBoundingClientRect().top < 0 &&
+      footer.getBoundingClientRect().top > 1000
+    ) {
+      btnUP();
+    } else {
+      if (floatBtn) {
+        body.lastElementChild.remove();
+      }
+    }
+  });
+}
+
+function startApp() {
+  loadEventListeners();
+}
+
+function btnUP() {
+  const floatBtn = body.lastElementChild.classList.contains("floating-btn");
+  if (!floatBtn) {
+    const btn = document.createElement("button");
+    btn.classList.add("floating-btn");
+    btn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-up-tail" width="48" height="48" viewBox="0 0 24 24" stroke-width="1" stroke="#fafaf7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 18l0 -15" />
+    <path d="M15 6l-3 -3l-3 3" />
+    <path d="M15 21l-3 -3l-3 3" />
+  </svg>
+    `;
+    body.appendChild(btn);
+    btn.classList.add("fade-in");
+
+    btn.addEventListener("click", (e) => {
+      window.scrollTo(0, 0);
+    });
+  }
 }
 
 function showIMG(idIMG) {
@@ -125,10 +170,20 @@ function createModal(code, isIMG = false) {
   overlay.appendChild(window);
   body.appendChild(overlay);
   body.classList.add("lock-body");
-  const closebtn = window.firstElementChild;
-  closebtn.addEventListener("click", () => {
-    overlay.remove();
-    body.classList.remove("lock-body");
+  window.classList.add("fade-in");
+  // const closebtn = window.firstElementChild;
+  // closebtn.addEventListener("click", () => {
+  //   overlay.remove();
+  //   body.classList.remove("lock-body");
+  // });
+  body.addEventListener("click", (e) => {
+    if (
+      e.target.classList.contains("overlay") ||
+      e.target.classList.contains("close-btn")
+    ) {
+      overlay.remove();
+      body.classList.remove("lock-body");
+    }
   });
 }
 

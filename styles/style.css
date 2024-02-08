@@ -23,6 +23,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
 }
 
 *,
@@ -404,6 +405,7 @@ main .separator {
 .album__photos {
   display: grid;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -555,6 +557,20 @@ main .separator {
   cursor: pointer;
 }
 
+.floating-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #25252573;
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
+
 /* Modals */
 .overlay {
   background-color: rgba(37, 37, 37, 0.675);
@@ -580,4 +596,31 @@ main .separator {
   background-color: rgba(37, 37, 37, 0);
   width: 95%;
   text-align: end;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
 }
