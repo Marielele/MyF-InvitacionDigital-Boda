@@ -447,13 +447,29 @@ main .separator {
     display: flex;
   }
 
-  .album__photos--galery {
-    grid-template-rows: repeat(3, 1fr);
-  }
-
   #galery-photo-1 {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
+    background-image: url(../img/4.jpeg);
+  }
+
+  #galery-photo-3 {
+    background-image: url(../img/6.jpg);
+  }
+
+  #galery-photo-1, #galery-photo-3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  #galery-photo-1 img, #galery-photo-3 img{
+    visibility: hidden;
+  }
+
+
+  .album__photos--galery {
+    grid-template-rows: repeat(3, 1fr);
   }
 
   .album__photo--galery {

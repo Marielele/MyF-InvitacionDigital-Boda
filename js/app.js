@@ -49,10 +49,12 @@ function loadEventListeners() {
   });
 
   galery.addEventListener("click", (e) => {
-    if (e.target.alt === "Los novios") {
-      let imgSelected = e.target.id;
-      showIMG(imgSelected);
-    }
+    // if (e.target.alt === "Los novios") {
+    //   let imgSelected = e.target.id;
+    //   showIMG(imgSelected);
+    // }
+    let imgSelected = e.target.id;
+    showIMG(imgSelected);
   });
 
   window.addEventListener("scroll", (e) => {
@@ -101,13 +103,6 @@ function btnUP() {
 
 function showIMG(idIMG) {
   switch (idIMG) {
-    case "img1":
-      codeHTML = `
-      <p class='no-margin close-btn'> x </p>
-      <img src="img/1.jpg" alt="Beach" class="w-100" id="img1" />
-      `;
-      createModal(codeHTML, true);
-      break;
     case "img2":
       codeHTML = `
       <p class='no-margin close-btn'> x </p>
