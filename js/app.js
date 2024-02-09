@@ -13,6 +13,7 @@ const btnModal = document.querySelectorAll(".btn-wbg");
 const album = document.querySelector(".album__photos--location");
 const galery = document.querySelector(".album__photos--galery");
 const body = document.querySelector("body");
+const sections = document.querySelectorAll(".sctn");
 let weddingDay = new Date("2024-12-14T16:30:00");
 const second = 1000;
 const minute = second * 60;
@@ -73,6 +74,7 @@ function loadEventListeners() {
 
 function startApp() {
   loadEventListeners();
+  watching();
 }
 
 function btnUP() {
@@ -184,6 +186,30 @@ function createModal(code, isIMG = false) {
       overlay.remove();
       body.classList.remove("lock-body");
     }
+  });
+}
+
+function triggerAnimation(entries) {
+  entries.forEach((entry) => {
+    const q = entry.target.querySelector(".animate");
+    if (q === null) {
+      console.log(" ");
+    } else {
+      q.classList.toggle("unset", entry.isIntersecting);
+    }
+  });
+}
+
+function watching() {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: .1,
+  };
+
+  const observer = new IntersectionObserver(triggerAnimation, options);
+  sections.forEach((section) => {
+    observer.observe(section);
   });
 }
 

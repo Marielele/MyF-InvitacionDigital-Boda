@@ -10,23 +10,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;600&family=Rosarivo:ital@0;1&family=Rouge+Script&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Style+Script&display=swap"
       rel="stylesheet"
     />
     <link rel="preload" href="styles/style.css" as="style" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <header>
-      <p class="no-margin text-center">¡Nos casamos!</p>
+    <header class="sctn">
+      <p class="no-margin text-center animate">¡Nos casamos!</p>
     </header>
-    <main class="container">
-      <section>
-        <img
-          src="img/seacreatures.png"
-          alt="Caracolas, estellas y corales"
-          class="w-100 hdn"
-        />
+    <main class="container sctn">
+      <section class="animate">
+        <hr class="separator hide" />
+        <picture>
+          <source srcset="img/lowres/seacreatures.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/seacreatures.png"
+            alt="Caracolas, estellas y corales"
+            class="w-100 hdn"
+          />
+        </picture>
         <h1 class="text-center no-margin">Mariana <span>&</span> Fernando</h1>
         <hr class="separator" />
         <h3 class="text-center">Sábado 14 de Diciembre</h3>
@@ -195,359 +200,378 @@
             <p class="no-margin">App del hotel</p>
           </a>
         </nav>
-      </section>
-      <img
-        src="img/watercolor-separator.png"
-        alt="blue flowers"
-        class="w-100 flower-separator"
-      />
-    </main>
-    <section class="container text-center" id="first">
-      <hr class="separator" />
-      <p class="paragraph">Con la bendición de Dios y nuestros padres:</p>
-      <div class="parents">
-        <div class="parents__names">
-          <img src="img/bride.png" alt="bride-icon" />
-          <p class="color-dark">Padres de la novia:</p>
-          <p class="bold big-font">
-            Rosa Cardona Juárez<span>&</span>Héctor Mata Pérez
-          </p>
-        </div>
-        <div class="parents__names">
-          <img src="img/groom.png" alt="groom-icon" />
-          <p class="color-dark">Padres del novio:</p>
-          <p class="bold big-font">
-            Claudia Graciela Romero Vega<span>&</span>Arturo Fernando Garza
-            García
-          </p>
-        </div>
-      </div>
-      <div class="big-day" id="big-day">
-        <div class="big-day__group--center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-heart"
-            width="56"
-            height="56"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#1e1e1f"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
-            />
-          </svg>
-          <p class="text-center paragraph">Nosotros</p>
-          <h3 class="text-center no-margin cursive">Mariana y Fernando</h3>
-          <p class="text-center paragraph">
-            Tenemos el honor de invitarles a nuestro enlace matrimonial el:
-          </p>
-          <h3 class="text-center no-margin">14 de Diciembre de 2024</h3>
-          <p class="text-center paragraph">
-            Esperamos de todo corazón tengan la oportunidad de estar con
-            nosotros y celebrar nuestro matrimonio.
-          </p>
-        </div>
-        <img src="img/calendar.png" alt="Calendario" class="w-100 calendar" />
-        <div class="big-day__group--center">
-          <p>Faltan:</p>
-          <div class="day-counter text-center">
-            <div><h2>##</h2></div>
-            <div><h2>##</h2></div>
-            <div><h2>##</h2></div>
-            <div><h2>##</h2></div>
-            <div>Días</div>
-            <div>Horas</div>
-            <div>Minutos</div>
-            <div>Segundos</div>
-          </div>
+        <picture>
+          <source
+            srcset="img/lowres/watercolor-separator.webp"
+            type="image/webp"
+          />
           <img
+            loading="lazy"
             src="img/watercolor-separator.png"
             alt="blue flowers"
             class="w-100 flower-separator"
           />
+        </picture>
+      </section>
+    </main>
+    <div class="sctn">
+      <section class="container text-center animate" id="first">
+        <hr class="separator" />
+        <p class="paragraph">Con la bendición de Dios y nuestros padres:</p>
+        <div class="parents">
+          <div class="parents__names">
+            <picture>
+              <source srcset="img/lowres/bride.webp" type="image/webp" />
+              <img loading="lazy" src="img/bride.png" alt="bride-icon" />
+            </picture>
+            <p class="color-dark">Padres de la novia:</p>
+            <p class="bold big-font">
+              Rosa Cardona Juárez<span>&</span>Héctor Mata Pérez
+            </p>
+          </div>
+          <div class="parents__names">
+            <picture>
+              <source srcset="img/lowres/groom.webp" type="webp" />
+              <img loading="lazy" src="img/groom.png" alt="groom-icon" />
+            </picture>
+            <p class="color-dark">Padres del novio:</p>
+            <p class="bold big-font">
+              Claudia Graciela Romero Vega<span>&</span>Arturo Fernando Garza
+              García
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="container text-center" id="location">
-      <hr class="separator" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-map icon-title"
-        width="56"
-        height="56"
-        viewBox="0 0 24 24"
-        stroke-width="1"
-        stroke="#1e1e1f"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3v-13" />
-        <path d="M9 4v13" />
-        <path d="M15 7v13" />
-      </svg>
-      <h2>Ubicación</h2>
-      <h3>Hotel Moon Palace "Nizuc"</h3>
-      <div class="album__photos album__photos--location min-jump-line">
-        <div class="album__photo--location" id="location-photo-1">
-          <img src="img/1.jpg" alt="Beach" class="w-100" id="img1" />
+        <div class="big-day" id="big-day">
+          <div class="big-day__group--center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart"
+              width="56"
+              height="56"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#1e1e1f"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+              />
+            </svg>
+            <p class="text-center paragraph">Nosotros</p>
+            <h3 class="text-center no-margin cursive">Mariana y Fernando</h3>
+            <p class="text-center paragraph">
+              Tenemos el honor de invitarles a nuestro enlace matrimonial el:
+            </p>
+            <h3 class="text-center no-margin">14 de Diciembre de 2024</h3>
+            <p class="text-center paragraph">
+              Esperamos de todo corazón tengan la oportunidad de estar con
+              nosotros y celebrar nuestro matrimonio.
+            </p>
+          </div>
+          <picture>
+            <source srcset="img/lowres/calendar.webp" type="image/webp">
+            <img loading="lazy" src="img/calendar.png" alt="Calendario" class="w-100 calendar" />
+          </picture>
+          <div class="big-day__group--center">
+            <p>Faltan:</p>
+            <div class="day-counter text-center">
+              <div><h2>##</h2></div>
+              <div><h2>##</h2></div>
+              <div><h2>##</h2></div>
+              <div><h2>##</h2></div>
+              <div>Días</div>
+              <div>Horas</div>
+              <div>Minutos</div>
+              <div>Segundos</div>
+            </div>
+            <picture>
+              <source
+                srcset="img/lowres/watercolor-separator.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="img/watercolor-separator.png"
+                alt="blue flowers"
+                class="w-100 flower-separator"
+              />
+            </picture>
+          </div>
         </div>
-        <div class="album__photo--location" id="location-photo-2">
-          <img src="img/2.jpg" alt="Wedding place" class="w-100" id="img2" />
+      </section>
+    </div>
+    <div class="sctn">
+      <section class="container text-center animate" id="location">
+        <hr class="separator" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-map icon-title"
+          width="56"
+          height="56"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#1e1e1f"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3v-13" />
+          <path d="M9 4v13" />
+          <path d="M15 7v13" />
+        </svg>
+        <h2>Ubicación</h2>
+        <h3>Hotel Moon Palace "Nizuc"</h3>
+        <div class="album__photos album__photos--location min-jump-line">
+          <div class="album__photo--location" id="location-photo-1">
+            <img src="img/1.jpg" alt="Beach" class="w-100" id="img1" />
+          </div>
+          <div class="album__photo--location" id="location-photo-2">
+            <img src="img/2.jpg" alt="Wedding place" class="w-100" id="img2" />
+          </div>
+          <div class="album__photo--location" id="location-photo-3">
+            <img src="img/3.jpg" alt="Capilla" class="w-100" id="img3" />
+          </div>
         </div>
-        <div class="album__photo--location" id="location-photo-3">
-          <img src="img/3.jpg" alt="Capilla" class="w-100" id="img3" />
+        <button class="btn-wbg jump-line">Mapa del hotel</button>
+        <div class="location__info">
+          <div class="location__info-place">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-building-church"
+              width="56"
+              height="56"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#1e1e1f"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 21l18 0" />
+              <path d="M10 21v-4a2 2 0 0 1 4 0v4" />
+              <path d="M10 5l4 0" />
+              <path d="M12 3l0 5" />
+              <path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" />
+            </svg>
+            <h3>Ceremonia religiosa</h3>
+            <p class="paragraph wedding-time">
+              A las <span>16:00 horas</span> en la Capilla Inmaculada Concepción
+              establecida dentro del hotel
+            </p>
+          </div>
+          <div class="location__info-place">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-glass"
+              width="56"
+              height="56"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#1e1e1f"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M8 21l8 0" />
+              <path d="M12 15l0 6" />
+              <path
+                d="M17 3l1 7c0 3.012 -2.686 5 -6 5s-6 -1.988 -6 -5l1 -7h10z"
+              />
+            </svg>
+            <h3>Recepción</h3>
+            <p>Recepción:</p>
+          </div>
         </div>
-      </div>
-      <button class="btn-wbg">Mapa del hotel</button>
-      <br class="jump-line" />
-      <!-- <div class="map min-jump-line">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.262118296417!2d-86.8296429!3d20.982127499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e815a8a5f8c21%3A0x69e50bf9ec9355f7!2sMoon%20Palace%20Nizuc%2C%2077563%20Quintana%20Roo!5e0!3m2!1ses-419!2smx!4v1699421624684!5m2!1ses-419!2smx"
-          width="300"
-          height="300"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div> -->
-      <div class="location__info">
-        <div class="location__info-place">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-building-church"
-            width="56"
-            height="56"
-            viewBox="0 0 24 24"
-            stroke-width="1"
-            stroke="#1e1e1f"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 21l18 0" />
-            <path d="M10 21v-4a2 2 0 0 1 4 0v4" />
-            <path d="M10 5l4 0" />
-            <path d="M12 3l0 5" />
-            <path d="M6 21v-7m-2 2l8 -8l8 8m-2 -2v7" />
-          </svg>
-          <h3>Ceremonia religiosa</h3>
-          <p class="paragraph wedding-time">
-            A las <span>16:00 horas</span> en la Capilla Inmaculada Concepción
-            establecida dentro del hotel
-          </p>
-        </div>
-        <div class="location__info-place">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-glass"
-            width="56"
-            height="56"
-            viewBox="0 0 24 24"
-            stroke-width="1"
-            stroke="#1e1e1f"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M8 21l8 0" />
-            <path d="M12 15l0 6" />
-            <path
-              d="M17 3l1 7c0 3.012 -2.686 5 -6 5s-6 -1.988 -6 -5l1 -7h10z"
-            />
-          </svg>
-          <h3>Recepción</h3>
-          <p>Recepción:</p>
-        </div>
-      </div>
-    </section>
-    <div class="container text-center album" id="galery">
-      <hr class="separator" />
-      <p class="text-center paragraph album__legend">
-        "Todo lo hizo hermoso en su tiempo y ha puesto eternidad en el corazón
-        de ellos, sin que alcance el hombre a entender la obra que ha hecho Dios
-        desde el principio hasta el fin." <span>Eclesiastés 3:11</span>
-      </p>
-      <div class="album__photos album__photos--galery">
-        <div class="album__photo--galery" id="galery-photo-1">
-          <img src="img/4.jpeg" alt="Los novios" class="w-100" id="img4" />
-        </div>
-        <div class="album__photo--galery" id="galery-photo-2">
-          <img src="img/5.jpg" alt="Los novios" class="w-100" id="img5" />
-        </div>
-        <div class="album__photo--galery" id="galery-photo-3">
-          <img src="img/6.jpg" alt="Los novios" class="w-100" id="img6" />
-        </div>
-        <div class="album__photo--galery" id="galery-photo-4">
-          <img src="img/7.jpg" alt="Los novios" class="w-100" id="img7" />
+      </section>
+    </div>
+    <div class="sctn">
+      <div class="container text-center album animate" id="galery">
+        <hr class="separator" />
+        <p class="text-center paragraph album__legend">
+          "Todo lo hizo hermoso en su tiempo y ha puesto eternidad en el corazón
+          de ellos, sin que alcance el hombre a entender la obra que ha hecho
+          Dios desde el principio hasta el fin." <span>Eclesiastés 3:11</span>
+        </p>
+        <div class="album__photos album__photos--galery">
+          <div class="album__photo--galery" id="galery-photo-1">
+            <img src="img/4.jpeg" alt="Los novios" class="w-100" id="img4" />
+          </div>
+          <div class="album__photo--galery" id="galery-photo-2">
+            <img src="img/5.jpg" alt="Los novios" class="w-100" id="img5" />
+          </div>
+          <div class="album__photo--galery" id="galery-photo-3">
+            <img src="img/6.jpg" alt="Los novios" class="w-100" id="img6" />
+          </div>
+          <div class="album__photo--galery" id="galery-photo-4">
+            <img src="img/7.jpg" alt="Los novios" class="w-100" id="img7" />
+          </div>
         </div>
       </div>
     </div>
-    <section class="container text-center" id="dress-code">
-      <hr class="separator" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-tie icon-title"
-        width="56"
-        height="56"
-        viewBox="0 0 24 24"
-        stroke-width="1"
-        stroke="#1e1e1f"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path
-          d="M12 22l4 -4l-2.5 -11l.993 -2.649a1 1 0 0 0 -.936 -1.351h-3.114a1 1 0 0 0 -.936 1.351l.993 2.649l-2.5 11l4 4z"
-        />
-        <path d="M10.5 7h3l5 5.5" />
-      </svg>
-      <h2>Código de vestimenta</h2>
-      <p class="text-center paragraph">
-        Se pide cordialmente a usar la paleta de colores que les presentamos en
-        la siguiente sección
-      </p>
-    </section>
-    <!-- <hr class="separator" />
-    <section class="container text-center">
-      <h2>Itinerario</h2>
-    </section> -->
-    <section class="container text-center" id="gifts">
-      <hr class="separator" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-gift icon-title"
-        width="56"
-        height="56"
-        viewBox="0 0 24 24"
-        stroke-width="1"
-        stroke="#1e1e1f"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path
-          d="M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"
-        />
-        <path d="M12 8l0 13" />
-        <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" />
-        <path
-          d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5"
-        />
-      </svg>
-      <h2>Regalos</h2>
-      <p class="paragraph">
-        Para nosotros, lo más importante es tu prescencia y los buenos deseos.
-        Ponemos a su disposición nuestra mesa de regalos.
-      </p>
-      <div class="btns jump-line">
-        <a
-          href="https://www.sears.com.mx/Mesa-de-Regalos/113972/te-invito-a-mi-boda-fernando-arturo-mariana-mata"
-          class="btn-wbg"
-          >Sears | Mesa #113972</a
+    <div class="sctn">
+      <section class="container text-center animate" id="dress-code">
+        <hr class="separator" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-tie icon-title"
+          width="56"
+          height="56"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#1e1e1f"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
-        <a
-          href="https://www.amazon.com.mx/wedding/registry/2SAGHI5LW32DA"
-          class="btn-wbg"
-          >Amazon | Mesa de regalos</a
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M12 22l4 -4l-2.5 -11l.993 -2.649a1 1 0 0 0 -.936 -1.351h-3.114a1 1 0 0 0 -.936 1.351l.993 2.649l-2.5 11l4 4z"
+          />
+          <path d="M10.5 7h3l5 5.5" />
+        </svg>
+        <h2>Código de vestimenta</h2>
+        <p class="text-center paragraph">
+          Se pide cordialmente a usar la paleta de colores que les presentamos
+          en la siguiente sección
+        </p>
+      </section>
+    </div>
+    <div class="sctn">
+      <section class="container text-center animate" id="gifts">
+        <hr class="separator" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-gift icon-title"
+          width="56"
+          height="56"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#1e1e1f"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
-        <button class="btn-wbg">Ver datos bancarios</button>
-      </div>
-    </section>
-    <section class="container text-center" id="app">
-      <hr class="separator" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-device-mobile icon-title"
-        width="56"
-        height="56"
-        viewBox="0 0 24 24"
-        stroke-width="1"
-        stroke="#1e1e1f"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path
-          d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z"
-        />
-        <path d="M11 4h2" />
-        <path d="M12 17v.01" />
-      </svg>
-      <h2>App del Hotel</h2>
-      <p class="text-center paragraph">
-        Recuerda que tu prescencia es lo más importante para nosotros, asi que
-        para que tu estadía sea mas placentera no olvides instalar la app del
-        hotel
-      </p>
-      <div class="hotel-app">
-        <a
-          href="https://play.google.com/store/apps/details?id=com.palaceresorts.app"
-          class="btn-nobg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-brand-google-play"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            stroke-width="1"
-            stroke="#84a1c4"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"
+          />
+          <path d="M12 8l0 13" />
+          <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" />
+          <path
+            d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5"
+          />
+        </svg>
+        <h2>Regalos</h2>
+        <p class="paragraph">
+          Para nosotros, lo más importante es tu prescencia y los buenos deseos.
+          Ponemos a su disposición nuestra mesa de regalos.
+        </p>
+        <div class="btns jump-line">
+          <a
+            href="https://www.sears.com.mx/Mesa-de-Regalos/113972/te-invito-a-mi-boda-fernando-arturo-mariana-mata"
+            class="btn-wbg"
+            >Sears | Mesa #113972</a
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z"
-            />
-            <path d="M15 9l-10.5 11.5" />
-            <path d="M4.5 3.5l10.5 11.5" />
-          </svg>
-          <p class="no-margin">Playstore</p>
-        </a>
-        <a
-          href="https://apps.apple.com/mx/app/palace-resorts/id1411599607"
-          class="btn-nobg"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-brand-appstore"
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            stroke-width="1"
-            stroke="#84a1c4"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+          <a
+            href="https://www.amazon.com.mx/wedding/registry/2SAGHI5LW32DA"
+            class="btn-wbg"
+            >Amazon | Mesa de regalos</a
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-            <path d="M8 16l1.106 -1.99m1.4 -2.522l2.494 -4.488" />
-            <path d="M7 14h5m2.9 0h2.1" />
-            <path d="M16 16l-2.51 -4.518m-1.487 -2.677l-1 -1.805" />
-          </svg>
-          <p class="no-margin">Appstore</p>
-        </a>
-      </div>
-      <p class="text-center paragraph jump-line">
-        Ante cualquier duda sobre la reservación no dude en mandarle mensaje a
-        nuestra coordinadora de eventos
-      </p>
-    </section>
+          <button class="btn-wbg">Ver datos bancarios</button>
+        </div>
+      </section>
+    </div>
+    <div class="sctn">
+      <section class="container text-center animate" id="app">
+        <hr class="separator" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-device-mobile icon-title"
+          width="56"
+          height="56"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="#1e1e1f"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z"
+          />
+          <path d="M11 4h2" />
+          <path d="M12 17v.01" />
+        </svg>
+        <h2>App del Hotel</h2>
+        <p class="text-center paragraph">
+          Recuerda que tu prescencia es lo más importante para nosotros, asi que
+          para que tu estadía sea mas placentera no olvides instalar la app del
+          hotel
+        </p>
+        <div class="hotel-app">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.palaceresorts.app"
+            class="btn-nobg"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-google-play"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#84a1c4"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z"
+              />
+              <path d="M15 9l-10.5 11.5" />
+              <path d="M4.5 3.5l10.5 11.5" />
+            </svg>
+            <p class="no-margin">Playstore</p>
+          </a>
+          <a
+            href="https://apps.apple.com/mx/app/palace-resorts/id1411599607"
+            class="btn-nobg"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-appstore"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#84a1c4"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M8 16l1.106 -1.99m1.4 -2.522l2.494 -4.488" />
+              <path d="M7 14h5m2.9 0h2.1" />
+              <path d="M16 16l-2.51 -4.518m-1.487 -2.677l-1 -1.805" />
+            </svg>
+            <p class="no-margin">Appstore</p>
+          </a>
+        </div>
+        <p class="text-center paragraph jump-line">
+          Ante cualquier duda sobre la reservación no dude en mandarle mensaje a
+          nuestra coordinadora de eventos
+        </p>
+      </section>
+    </div>
     <footer class="footer">
       <nav class="footer__nav text-center">
         <a href="">M & F</a>
