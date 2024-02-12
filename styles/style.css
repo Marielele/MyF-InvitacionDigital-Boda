@@ -10,8 +10,8 @@
   --golden: #aa9e1b76;
 
   --names-font: "Style Script", cursive;
-  --titles-font: 'Libre Baskerville', serif;
-  --main-font: 'Lora', serif;
+  --titles-font: "Libre Baskerville", serif;
+  --main-font: "Lora", serif;
 
   --phone: 480px;
   --tablet: 768px;
@@ -99,6 +99,10 @@ body::-webkit-scrollbar {
   color: var(--dark);
 }
 
+.color-light {
+  color: var(--light) !important;
+}
+
 .big-font {
   font-size: larger;
 }
@@ -136,8 +140,12 @@ body::-webkit-scrollbar {
 
 /* Header */
 h1 span,
+h3 span,
 p span {
   display: block;
+}
+
+p span {
   color: var(--dark);
 }
 
@@ -380,7 +388,7 @@ main .separator {
   }
 
   .parents__names img {
-    width: auto
+    width: auto;
   }
 }
 
@@ -457,16 +465,17 @@ main .separator {
     background-image: url(../img/6.jpg);
   }
 
-  #galery-photo-1, #galery-photo-3 {
+  #galery-photo-1,
+  #galery-photo-3 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
 
-  #galery-photo-1 img, #galery-photo-3 img{
+  #galery-photo-1 img,
+  #galery-photo-3 img {
     visibility: hidden;
   }
-
 
   .album__photos--galery {
     grid-template-rows: repeat(3, 1fr);
@@ -479,6 +488,22 @@ main .separator {
   .album__photo--galery img {
     object-fit: cover;
   }
+}
+
+/* Dress code */
+@counter-style hearts {
+  system: cyclic;
+  symbols: "\2661";
+  suffix: " ";
+}
+
+ul {
+  text-align: left;
+  list-style: hearts;
+}
+
+li span {
+  font-weight: 700;
 }
 
 /* Hotel app */
@@ -577,11 +602,22 @@ main .separator {
   }
 }
 
+.close-btn,
+.close-btn-photos {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: xx-large;
+}
+
 .close-btn {
   display: inline-block;
-  text-transform: uppercase;
   color: var(--dark);
-  cursor: pointer;
+}
+
+.close-btn-photos {
+  display: block;
+  text-align: end;
+  color: var(--light);
 }
 
 .floating-btn {
@@ -626,7 +662,7 @@ main .separator {
 }
 
 @media (min-width: 992px) {
-  .modal{
+  .modal {
     width: 60%;
   }
 }
@@ -682,4 +718,8 @@ main .separator {
   main section {
     margin-top: 12rem;
   }
+}
+
+/* Theme */
+@media (prefers-color-scheme: dark) {
 }

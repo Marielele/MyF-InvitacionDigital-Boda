@@ -103,53 +103,74 @@ function btnUP() {
 
 function showIMG(idIMG) {
   switch (idIMG) {
+    case "img1":
+      codeHTML = `
+      <p class='no-margin close-btn-photos'> x </p>
+      <img src="img/1.jpg" alt="Beach" class="w-100" id="img1" />
+      `;
+      createModal(codeHTML, true);
+      break;
     case "img2":
       codeHTML = `
-      <p class='no-margin close-btn'> x </p>
+      <p class='no-margin close-btn-photos'> x </p>
       <img src="img/2.jpg" alt="Beach" class="w-100" id="img2" />
       `;
       createModal(codeHTML, true);
       break;
     case "img3":
       codeHTML = `
-      <p class='no-margin close-btn'> x </p>
+      <p class='no-margin close-btn-photos'> x </p>
       <img src="img/3.jpg" alt="Beach" class="w-100" id="img3" />
       `;
       createModal(codeHTML, true);
       break;
     case "img4":
       codeHTML = `
-        <p class='no-margin close-btn'> x </p>
+        <p class='no-margin close-btn-photos'> x </p>
         <img src="img/4.jpeg" alt="Los novios" class="w-100" id="img4" />
         `;
       createModal(codeHTML, true);
       break;
     case "img5":
       codeHTML = `
-          <p class='no-margin close-btn'> x </p>
+          <p class='no-margin close-btn-photos'> x </p>
           <img src="img/5.jpg" alt="Los novios" class="w-100" id="img5" />
           `;
       createModal(codeHTML, true);
       break;
     case "img6":
       codeHTML = `
-            <p class='no-margin close-btn'> x </p>
+            <p class='no-margin close-btn-photos'> x </p>
             <img src="img/6.jpg" alt="Los novios" class="w-100" id="img6" />
             `;
       createModal(codeHTML, true);
       break;
     case "img7":
       codeHTML = `
-              <p class='no-margin close-btn'> x </p>
+              <p class='no-margin close-btn-photos'> x </p>
               <img src="img/7.jpg" alt="Los novios" class="w-100" id="img7" />
               `;
       createModal(codeHTML, true);
       break;
     case "location-photo-1":
       codeHTML = `
-      <p class='no-margin close-btn'> x </p>
+      <p class='no-margin close-btn color-light'> x </p>
       <img src="img/1.jpg" alt="Beach" class="w-100" id="img1" />
       `;
+      createModal(codeHTML, true);
+      break;
+    case "galery-1":
+      codeHTML = `
+        <p class='no-margin close-btn-photos'> x </p>
+        <img src="img/4.jpeg" alt="Beach" class="w-100" id="img4" />
+        `;
+      createModal(codeHTML, true);
+      break;
+    case "galery-3":
+      codeHTML = `
+        <p class='no-margin close-btn-photos'> x </p>
+        <img src="img/3.jpg" alt="Beach" class="w-100" id="img3" />
+        `;
       createModal(codeHTML, true);
       break;
     default:
@@ -176,7 +197,8 @@ function createModal(code, isIMG = false) {
   body.addEventListener("click", (e) => {
     if (
       e.target.classList.contains("overlay") ||
-      e.target.classList.contains("close-btn")
+      e.target.classList.contains("close-btn") ||
+      e.target.classList.contains("close-btn-photos")
     ) {
       overlay.remove();
       body.classList.remove("lock-body");
@@ -199,7 +221,7 @@ function watching() {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: .1,
+    threshold: 0.1,
   };
 
   const observer = new IntersectionObserver(triggerAnimation, options);
