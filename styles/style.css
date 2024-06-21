@@ -44,7 +44,7 @@ body {
 
 h1,
 .cursive {
-  font-size: 6.5rem;
+  font-size: 6.3rem;
   font-family: var(--names-font);
   color: var(--tertiary);
 }
@@ -423,7 +423,7 @@ main .separator {
 
 @media (min-width: 768px) {
   .location__info {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     align-items: center;
   }
