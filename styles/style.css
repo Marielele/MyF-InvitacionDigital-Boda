@@ -38,7 +38,14 @@ body {
   font-size: 1.6rem;
   font-family: var(--main-font);
   color: var(--gray);
-  background-color: var(--light);
+  /* background-color: var(--light); */
+  background: rgb(249, 250, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(249, 250, 255, 1) 0%,
+    rgba(242, 249, 255, 1) 99%,
+    rgba(132, 161, 196, 1) 100%
+  );
   line-height: 1;
 }
 
@@ -250,7 +257,7 @@ main .separator {
 
 .nav a {
   border-left: 1px var(--gray) dotted;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .nav a:hover {
@@ -259,7 +266,7 @@ main .separator {
 }
 
 .nav a svg {
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .nav a:hover svg {
@@ -421,11 +428,23 @@ main .separator {
   display: grid;
 }
 
+.location__info-place {
+  margin-bottom: 1rem;
+}
+
+.location__info-place:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 768px) {
   .location__info {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     align-items: center;
+  }
+
+  .location__info-place:last-child {
+    margin-bottom: 1rem;
   }
 }
 
@@ -535,6 +554,15 @@ li span {
   }
 }
 
+/* Children allowed */
+#children span {
+  color: var(--additional-dark);
+  margin: 1.5rem 0;
+  font-family: var(--titles-font);
+  font-weight: 700;
+  letter-spacing: .5rem;
+}
+
 /* Hotel app */
 .hotel-app {
   margin: 2rem 0;
@@ -608,7 +636,7 @@ li span {
   padding: 1.2rem;
   border: 1px solid var(--tertiary);
   cursor: pointer;
-  transition: background-color .5s ease-out 100ms
+  transition: background-color 0.5s ease-out 100ms;
 }
 
 .btn-nobg,
@@ -617,12 +645,15 @@ li span {
   border: 1px solid var(--tertiary);
   border-radius: 3px;
   color: var(--tertiary);
-  background-color: var(--light);
   cursor: pointer;
 }
 
+.btn-wbg:hover {
+  background-color: var(--light);
+}
+
 .btn-nobg {
-  transition: box-shadow .5s ease-out;
+  transition: box-shadow 0.5s ease-out;
 }
 
 .btn-nobg:hover {
