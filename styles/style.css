@@ -25,7 +25,6 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scrollbar-width: none; /* Firefox */
-  scroll-behavior: smooth;
 }
 
 *,
@@ -137,6 +136,10 @@ body::-webkit-scrollbar {
 
 .min-jump-line {
   margin-bottom: 2rem;
+}
+
+.minimum-jump-line {
+  margin-bottom: .5rem;
 }
 
 .icon-title {
@@ -440,7 +443,6 @@ main .separator {
   .location__info {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    align-items: center;
   }
 
   .location__info-place:last-child {
@@ -496,7 +498,7 @@ main .separator {
   #galery-photo-4 {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
-    background-image: url(../img/4.jpeg);
+    background-image: url(../img/4.jpg);
   }
 
   #galery-photo-6 {
@@ -547,10 +549,25 @@ li span {
 @media (min-width: 768px) {
   .dc-paragraph {
     display: flex;
+    gap: .5rem;
   }
 
   .dress-code-list {
     width: 50%;
+  }
+}
+
+.horizontalIMG {
+  display: none;
+}
+
+@media (min-width: 768px){
+  .horizontalIMG {
+    display: block;
+  }
+
+  .verticalIMG {
+    display: none;
   }
 }
 
@@ -718,7 +735,7 @@ li span {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1px;
+  border-radius: .2rem;
 }
 
 /* Modals */

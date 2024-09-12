@@ -333,8 +333,9 @@
         <h2>Ubicación</h2>
         <h3>Hotel Moon Palace "Nizuc"</h3>
         <div class="album__photos album__photos--location min-jump-line"></div>
-        <button class="btn-wbg jump-line">Mapa del hotel</button>
-        <div class="location__info">
+        <button id="hotel-map" class="btn-wbg minimum-jump-line">Mapa del hotel</button>
+        <button id="church-map" class="btn-wbg jump-line">Mapa de capilla</button>
+        <div id="itinerary" class="location__info">
           <div class="location__info-place">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -360,6 +361,7 @@
               <span class="bold">Viernes 13 de Diciembre 2024</span>
               <span>Ubicación: Terraza Venado</span>
               6:00 pm - 10:00 pm
+              <span>Dress code: <u>Blanco semi-formal</u></span>
             </p>
           </div>
           <div class="location__info-place">
@@ -485,6 +487,27 @@
         </p>
         <div class="dc-paragraph">
           <div class="dress-code-list">
+            <picture class="verticalIMG">
+              <source
+                srcset="img/lowres/VerticalMujeres.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="img/VerticalMujeres.png"
+                alt="paleta de colores"
+                class="w-100"
+              />
+            </picture>
+            <picture class="horizontalIMG">
+              <source srcset="img/lowres/Mujeres.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/Mujeres.png"
+                alt="paleta de colores"
+                class="w-100"
+              />
+            </picture>
             <h4>Mujeres</h4>
             <ul class="paragraph">
               <li>Vestido largo</li>
@@ -500,6 +523,27 @@
             </ul>
           </div>
           <div class="dress-code-list">
+            <picture class="verticalIMG">
+              <source
+                srcset="img/lowres/VerticalHombres.webp"
+                type="image/webp"
+              />
+              <img
+                loading="lazy"
+                src="img/VerticalHombres.png"
+                alt="paleta de colores"
+                class="w-100"
+              />
+            </picture>
+            <picture class="horizontalIMG">
+              <source srcset="img/lowres/Hombres.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/Hombres.png"
+                alt="paleta de colores"
+                class="w-100"
+              />
+            </picture>
             <h4>Hombres</h4>
             <ul class="paragraph">
               <li>Camisa de lino o guayabera.</li>
@@ -516,7 +560,8 @@
         <hr class="separator" />
         <p class="paragraph">
           Queremos que toda la familia disfrute de la fiesta por lo que los
-          niños son <span>Bienvenidos</span> Contamos contigo para su constante supervisión.
+          niños son <span>Bienvenidos</span> Contamos contigo para su
+          constante supervisión.
         </p>
       </section>
     </div>

@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function startApp() {
-  const btnMap = document.querySelector("#location button");
+  const btnMap = document.querySelector("#hotel-map");
+  const btnMap_2 = document.querySelector("#church-map");
 
   watching();
   createGalery(1, 3, "location");
@@ -27,7 +28,11 @@ function startApp() {
   });
 
   btnMap.addEventListener("click", (e) => {
-    openMap();
+    openMap(0, "hotel");
+  });
+
+  btnMap_2.addEventListener("click", (e) => {
+    openMap(1, "capilla");
   });
 
   timer = setInterval(updateDays, 1000);
@@ -135,7 +140,8 @@ function createGalery(indexFirst, indexLast, type) {
       ? (img.alt = "Los novios")
       : (img.alt = "Lugares de hotel");
     div.onclick = function () {
-      showImage(i);
+      window.open(`img/${i}.jpg`);
+      // showImage(i);
     };
     pic.appendChild(srcSet);
     pic.appendChild(img);
@@ -185,7 +191,7 @@ function showImage(index) {
   imgModal.appendChild(img);
   imgModal.appendChild(prev);
   imgModal.appendChild(next);
-  console.log(`img clicked ${index}`);
+  // console.log(`img clicked ${index}`);
 }
 
 function createNewModal(img = false) {
@@ -215,17 +221,19 @@ function createNewModal(img = false) {
   };
 }
 
-function openMap() {
+function openMap(type, text) {
   createNewModal();
   const window = document.querySelector(".modal");
   const title = document.createElement("H3");
   const content = document.createElement("DIV");
   title.classList.add("text-center");
-  title.textContent = "Mapa";
-  content.innerHTML = `
+  title.textContent = `Mapa de ${text}`;
+  let url;
+  type == 0 ? url = `
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14900.956457773029!2d-86.8332951190797!3d20.983050039349827!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e815a5e4ba6c7%3A0x4022494765152a0a!2sLobby%20Moon%20Palace%20%40Nizuc!5e0!3m2!1ses-419!2smx!4v1707263298633!5m2!1ses-419!2smx" width="100%" height="400" style="border:0;" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  `;
+    </iframe>` : url = `
+  <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d232.83207670910235!2d-86.8296788!3d20.9800777!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDU4JzQ4LjUiTiA4NsKwNDknNDcuMSJX!5e0!3m2!1ses-419!2sco!4v1726167151904!5m2!1ses-419!2sco" width="100%" height="400" style="border:0;" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+  content.innerHTML = url;
   window.appendChild(title);
   window.appendChild(content);
 }
