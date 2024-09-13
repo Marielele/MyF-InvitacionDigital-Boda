@@ -22,7 +22,8 @@ function startApp() {
       btnUP();
     } else {
       if (floatBtn) {
-        body.lastElementChild.remove();
+        let floatingBTN = document.querySelector("#floating-btn");
+        floatingBTN.remove()
       }
     }
   });
@@ -70,6 +71,7 @@ function btnUP() {
   if (!floatBtn) {
     const btn = document.createElement("button");
     btn.classList.add("floating-btn");
+    btn.id = "floating-btn";
     btn.innerHTML = `
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-up-tail" width="48" height="48" viewBox="0 0 24 24" stroke-width="1" stroke="#fafaf7" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -87,7 +89,7 @@ function btnUP() {
 }
 
 function updateDays() {
-  let weddingDay = new Date("2024-12-14T16:30:00");
+  let weddingDay = new Date("2024-12-14T16:00:00");
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
@@ -125,10 +127,13 @@ function createGalery(indexFirst, indexLast, type) {
     const div = document.createElement("DIV");
     const pic = document.createElement("PICTURE");
     const srcSet = document.createElement("SOURCE");
+    const srcSet_2 = document.createElement("SOURCE");
     const img = document.createElement("IMG");
     div.classList.add(`album__photo--${type}`);
     div.id = `${type}-photo-${i}`;
     pic.id = `${type}-${i}`;
+    srcSet_2.srcset = `img/lowres/${i}.avif`;
+    srcSet_2.type = "image/avif";
     srcSet.srcset = `img/lowres/${i}.webp`;
     srcSet.type = "image/webp";
     img.id = i;
@@ -143,6 +148,7 @@ function createGalery(indexFirst, indexLast, type) {
       window.open(`img/${i}.jpg`);
       // showImage(i);
     };
+    pic.appendChild(srcSet_2);
     pic.appendChild(srcSet);
     pic.appendChild(img);
     div.appendChild(pic);
@@ -223,19 +229,29 @@ function createNewModal(img = false) {
 
 function openMap(type, text) {
   createNewModal();
+  const spinner = document.createElement("DIV");
+  spinner.classList.add("spinner");
+  spinner.innerHTML = "<span class='loader'></span>";
   const window = document.querySelector(".modal");
   const title = document.createElement("H3");
   const content = document.createElement("DIV");
   title.classList.add("text-center");
   title.textContent = `Mapa de ${text}`;
   let url;
-  type == 0 ? url = `
+  type == 0
+    ? (url = `
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14900.956457773029!2d-86.8332951190797!3d20.983050039349827!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e815a5e4ba6c7%3A0x4022494765152a0a!2sLobby%20Moon%20Palace%20%40Nizuc!5e0!3m2!1ses-419!2smx!4v1707263298633!5m2!1ses-419!2smx" width="100%" height="400" style="border:0;" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>` : url = `
-  <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d232.83207670910235!2d-86.8296788!3d20.9800777!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDU4JzQ4LjUiTiA4NsKwNDknNDcuMSJX!5e0!3m2!1ses-419!2sco!4v1726167151904!5m2!1ses-419!2sco" width="100%" height="400" style="border:0;" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+    </iframe>`)
+    : (url = `
+  <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d232.83207670910235!2d-86.8296788!3d20.9800777!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDU4JzQ4LjUiTiA4NsKwNDknNDcuMSJX!5e0!3m2!1ses-419!2sco!4v1726167151904!5m2!1ses-419!2sco" width="100%" height="400" style="border:0;" referrerpolicy="no-referrer-when-downgrade"></iframe>`);
   content.innerHTML = url;
   window.appendChild(title);
-  window.appendChild(content);
+  window.appendChild(spinner);
+  setTimeout(() => {
+    spinner.remove();
+    window.appendChild(content);
+  }, 3000);
+  // window.appendChild(content);
 }
 
 function closeModal() {
