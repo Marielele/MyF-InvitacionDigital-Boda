@@ -1,3 +1,33 @@
+@font-face {
+  font-family: Style Script;
+  src: url(fonts/StyleScript-Regular.woff) format("woff"),
+  url(fonts/Style_Script/StyleScript-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Libre Baskerville Bold;
+  src: url(fonts/librebaskerville-bold.woff) format("woff"),
+  url(fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lora;
+  src: url(fonts/Lora-Regular.woff) format("woff"),
+  url(fonts/Lora/static/Lora-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lora italic;
+  src: url(fonts/lora-italic.woff) format("woff"),
+  url(fonts/Lora/static/Lora-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Lora bold;
+  src: url(fonts/lora-bold.woff) format("woff"),
+  url(fonts/Lora/static/Lora-Bold.ttf) format("truetype");
+}
+
 :root {
   --light: #f9faff;
   --dark: #1e1e1f;
@@ -10,10 +40,10 @@
   --golden: #aa9e1b76;
 
   --names-font: "Style Script", cursive;
-  --titles-font: "Libre Baskerville", serif;
+  --titles-font: "Libre Baskerville Bold", serif;
   --main-font: "Lora", serif;
   --italic-font: "Lora italic", cursive;
-  --bold-font: "Libre Baskerville", serif;
+  --bold-font: "Lora bold", serif;
 
   --phone: 480px;
   --tablet: 768px;
@@ -104,7 +134,8 @@ body::-webkit-scrollbar {
 }
 
 .bold {
-  font-weight: 700;
+  /* font-weight: 700; */
+  font-family: var(--bold-font);
 }
 
 .color-dark {
@@ -428,7 +459,8 @@ main .separator {
 /* Location */
 .wedding-time span {
   display: inline;
-  font-weight: 700;
+  /* font-weight: 700; */
+  font-family: var(--bold-font);
 }
 
 .location__info {
@@ -456,7 +488,8 @@ main .separator {
 
 /* Album */
 .album__legend {
-  font-style: italic;
+  /* font-style: italic; */
+  font-family: var(--italic-font);
   line-height: 1.8;
 }
 
@@ -546,10 +579,6 @@ ul {
   list-style: hearts;
 }
 
-li span {
-  font-weight: 700;
-}
-
 @media (min-width: 768px) {
   .dc-paragraph {
     display: flex;
@@ -579,9 +608,10 @@ li span {
 #children span {
   color: var(--additional-dark);
   margin: 1.5rem 0;
-  font-family: var(--titles-font);
-  font-weight: 700;
+  font-family: var(--bold-font);
+  /* font-weight: 700; */
   letter-spacing: 0.5rem;
+  font-size: 2rem;
 }
 
 /* Hotel app */
