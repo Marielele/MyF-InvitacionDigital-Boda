@@ -23,7 +23,7 @@ function startApp() {
     } else {
       if (floatBtn) {
         let floatingBTN = document.querySelector("#floating-btn");
-        floatingBTN.remove()
+        floatingBTN.remove();
       }
     }
   });
