@@ -73,11 +73,9 @@ function btnUP() {
     btn.classList.add("floating-btn");
     btn.id = "floating-btn";
     btn.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-up-tail" width="48" height="48" viewBox="0 0 24 24" stroke-width="1" stroke="#fafaf7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-up" width="48" height="48" viewBox="0 0 24 24" stroke-width="1" stroke="#fafaf7" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M12 18l0 -15" />
-        <path d="M15 6l-3 -3l-3 3" />
-        <path d="M15 21l-3 -3l-3 3" />
+        <path d="M6 15l6 -6l6 6" />
       </svg>
       `;
     body.appendChild(btn);
@@ -136,9 +134,11 @@ function createGalery(indexFirst, indexLast, type) {
     srcSet_2.type = "image/avif";
     srcSet.srcset = `img/lowres/${i}.webp`;
     srcSet.type = "image/webp";
+    img.loading = "lazy";
+    img.width = 300;
+    img.height = 200;
     img.id = i;
     img.classList.add("w-100");
-    img.loading = "lazy";
     img.src = `img/${i}.jpg`;
     // if ternario
     type === "galery"

@@ -500,8 +500,8 @@ main .separator {
 }
 
 .album__legend span {
-  font-style: normal;
   font-size: smaller;
+  font-family: var(--main-font);
 }
 
 .album__photos {
