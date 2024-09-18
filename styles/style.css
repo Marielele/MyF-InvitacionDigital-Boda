@@ -192,6 +192,12 @@ p span {
   display: block;
 }
 
+@media (min-width: 768px){
+  h3 span {
+    display: inline;
+  }
+}
+
 p span {
   color: var(--dark);
 }
@@ -363,7 +369,7 @@ main .separator {
   .big-day {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
   }
 
   .big-day__group--down {
@@ -417,13 +423,13 @@ main .separator {
 }
 
 .parents__names img {
-  width: 20%;
+  width: auto;
 }
 
 @media (min-width: 768px) {
   .parents {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 0;
   }
 
   .parents__names {
