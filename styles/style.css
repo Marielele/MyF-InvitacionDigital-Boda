@@ -2,30 +2,35 @@
   font-family: Style Script;
   src: url(fonts/StyleScript-Regular.woff) format("woff"),
   url(fonts/Style_Script/StyleScript-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Libre Baskerville Bold;
   src: url(fonts/librebaskerville-bold.woff) format("woff"),
   url(fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Lora;
   src: url(fonts/Lora-Regular.woff) format("woff"),
   url(fonts/Lora/static/Lora-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Lora italic;
   src: url(fonts/lora-italic.woff) format("woff"),
   url(fonts/Lora/static/Lora-Italic.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Lora bold;
   src: url(fonts/lora-bold.woff) format("woff"),
   url(fonts/Lora/static/Lora-Bold.ttf) format("truetype");
+  font-display: swap;
 }
 
 :root {
